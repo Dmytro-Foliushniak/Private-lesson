@@ -1,2 +1,0 @@
-# Private-lesson
-Practicing coding 

@@ -1,0 +1,13 @@
+READ:
+- destructuring
+  https://uk.javascript.info/destructuring-assignment
+- Set, Map, WeekSet, WeekMap
+  https://uk.javascript.info/map-set
+  https://uk.javascript.info/weakmap-weakset
+- code formatting
+  https://uk.javascript.info/coding-style
+  https://github.com/airbnb/javascript
+
+CODE:
+- tasks in the end of articles from https://uk.javascript.info
+- try re-write arrays other tasks
