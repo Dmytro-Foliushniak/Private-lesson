@@ -11,3 +11,4 @@ READ:
 CODE:
 - tasks in the end of articles from https://uk.javascript.info
 - try re-write arrays other tasks
+- try to develop Iterator.js
