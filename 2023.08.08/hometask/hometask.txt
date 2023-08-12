@@ -7,6 +7,13 @@ READ:
 - code formatting
   https://uk.javascript.info/coding-style
   https://github.com/airbnb/javascript
+- Iterator
+  https://uk.javascript.info/function-basics
+  https://uk.javascript.info/object-methods
+  https://uk.javascript.info/constructor-new
+  https://uk.javascript.info/optional-chaining
+  https://uk.javascript.info/arrow-functions
+  https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters
 
 CODE:
 - tasks in the end of articles from https://uk.javascript.info
