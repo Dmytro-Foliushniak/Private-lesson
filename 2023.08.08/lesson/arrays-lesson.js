@@ -115,17 +115,39 @@ console.log(10, "  hello  Young  young developer ".trim().split(' ')
     return data;
   }, { res: [], cache: new Set() } ).res);
 
-
 /*
     11. Given a String in camel case "someFunctionName".
         Return string in kebab case: "someFunctionName" -> "some-function-name"
 */
+// string -> array -> string
+console.log(
+  11,
+  'someFunctionName'.split('').reduce((res, symbol) => {
+    const lowerCasedSymbol = symbol.toLowerCase();
+
+    if (symbol === lowerCasedSymbol) {
+      res += symbol;
+    }
+
+    if (symbol !== lowerCasedSymbol) {
+      res += `-${lowerCasedSymbol}`;
+    }
+
+    return res;
+  }, ''),
+);
 
 /*
     12. Given an Array [9,[2,5],[3,[4,[6,[7]],8,[1]]]]
         Return flat Array of Numbers, don't use .flat() method:
         [9,[2,5],[3,[4,[6,[7]],8,[1]]]] -> [9,2,5,3,4,6,7,8,1]
 */
+console.log(12,
+  [9,[2,5],[3,[4,[6,[7]],8,[1]]]]
+    .join(',')
+    .split(',')
+    .map(item => Number(item)),
+);
 
 /*
     13. Given an Array
@@ -141,17 +163,35 @@ console.log(10, "  hello  Young  young developer ".trim().split(' ')
         arr1[1].a // 1
         arr1[2][0] // 2
 */
+const deepCopy = function (arrArg){
+  return JSON.parse(JSON.stringify(arrArg))
+}
 
 /*
    14. Given Arrays [0,1,2,3,4,5] and [6,8,1,-1,8,3]
        Return new Array that contains items that present in both arrays:
        [0,8,1,2,3,4,5], [6,8,1,-1,8,3] -> [1,3,8]
 */
+const arrWithSomeNumberOne = [0,1,2,3,4,5]
+const arrWithSomeNumberTwo = [6,8,1,-1,8,3]
+
+console.log(
+  14,
+  arrWithSomeNumberOne
+    .reduce((acc,item)=>{
+        if (arrWithSomeNumberTwo.includes(item)){
+          acc.push(item)
+        }
+        return acc
+      } ,[])
+    .sort((a,b) => (a-b))
+);
 
 /*
    15. Given an Array [0,4,6,7,8,1,3,6,7,9,1,2,4,5,1]
        Return index of last number 4 -> 12
 */
+console.log(15, [0,4,6,7,8,1,3,6,7,9,1,2,4,5,1].lastIndexOf(4));
 
 
 /*
@@ -165,3 +205,21 @@ console.log(10, "  hello  Young  young developer ".trim().split(' ')
         Use method .splice() to get two arrays like:
         [0,0,0,0,0,0] and [1,1,1]
 */
+const arr171 = [0,0,0,0,0,1,1,1,0,0,0];
+// const arr172 = arr171.splice(3, 3);
+const startIndex = arr171.findIndex((v) => v === 1);
+const lastIndex = arr171.lastIndexOf(1);
+const arr172 = arr171.splice(startIndex, lastIndex);
+// console.log()
+
+// [0,0,0,1,0,1,0,1,1,1,0,0,1,1,0];
+const result = [1, 2, 3].reduce((res, number) => {
+  if (!res[number]) {
+    res[number] = [];
+  }
+  res[number].push(number);
+}, []);
+// result[0];
+// result[1];
+
+// [[0000], [1111], [22222]]

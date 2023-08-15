@@ -220,7 +220,7 @@ console.log(test)
 */
 
 const arrayIndexOf = [0,4,6,7,8,1,3,6,7,9,1,2,4,5,1]
-console.log(arrayIndexOf.indexOf(4))
+console.log(15, arrayIndexOf.indexOf(4))
 
 /*
    16. Given an Array [0,4,6,7,8,1,3,6,7,9,1,2,4,5,1]
@@ -236,7 +236,8 @@ console.log(arrayIndexOf.lastIndexOf(4))
 
 const finallyArray = [0,4,6,7,8,1,3,6,7,9,1,2,4,5,1]
 const spliceArray = finallyArray.splice(4, 5)
-console.log(spliceArray)
+// const spliceArray = finallyArray.slice(4, 4 + 5)
+console.log(17, spliceArray, finallyArray)
 
 /*
    18. Given an Array [0,0,0,1,1,1,0,0,0]
